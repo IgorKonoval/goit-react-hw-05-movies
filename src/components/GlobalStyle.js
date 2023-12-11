@@ -38,7 +38,7 @@ ul, ol {
   list-style: none;
   margin: 0 auto;
   padding: 0;
-}
+  }
 
 h1,
 h2,
