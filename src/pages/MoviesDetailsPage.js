@@ -45,7 +45,7 @@ export default function MoviesDetailsPage() {
 
   return (
     <>
-      <Link to={backLink.current.state?.from ?? '/'}>
+      <Link to={backLink.current?.state?.from ?? '/'}>
         <Button type="button">Go Back</Button>
       </Link>
       {isLoading && <Loader />}
@@ -57,7 +57,7 @@ export default function MoviesDetailsPage() {
             src={
               poster_path
                 ? `https://image.tmdb.org/t/p/w500${poster_path}`
-                : `https://via.placeholder.com/300x300/258DC8/E0F6FD?text=Image+is+not+availible`
+                : `https://via.placeholder.com/300x300/258DC8/E0F6FD?text=Image+is+not+available`
             }
             alt={original_title}
           />

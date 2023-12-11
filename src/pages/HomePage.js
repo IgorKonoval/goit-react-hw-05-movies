@@ -17,7 +17,7 @@ export default function HomePage() {
 
         setMovies(popularMovieng);
       } catch (error) {
-        toast(error);
+        toast.error(error);
       } finally {
         setIsLoading(false);
       }

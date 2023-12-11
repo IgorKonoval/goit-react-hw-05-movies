@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Loader from '../Loader/Loader';
 import { getReviews } from '../Api';
 import { ReviewItem, ReviewList } from './Reviews.styled';
+import toast from 'react-hot-toast';
+import { Loader } from 'components/Loader/Loader';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -18,7 +19,7 @@ const Reviews = () => {
         const userReviews = reviewData.results;
         setReviews(userReviews);
       } catch (error) {
-        console.error(error);
+        toast.error(error);
       } finally {
         setIsLoading(false);
       }

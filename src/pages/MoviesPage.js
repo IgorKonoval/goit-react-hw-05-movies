@@ -1,5 +1,4 @@
 import toast from 'react-hot-toast';
-
 import MoviesList from '../components/MoviesList/MoviesList';
 import Searchbar from '../components/Searchbar/Searchbar';
 import { getByQuery } from '../components/Api';
@@ -24,7 +23,7 @@ export default function MoviesPage() {
         const currentMovie = movieQuery.results;
         setMovies(currentMovie);
       } catch (error) {
-        toast(error);
+        toast.error(error);
       } finally {
         setIsLoading(false);
       }

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Loader from '../Loader/Loader';
+
 import { getCast } from '../Api';
 import { CastItem, CastList } from './Cast.styled';
+import toast from 'react-hot-toast';
+import { Loader } from 'components/Loader/Loader';
 
 const Cast = () => {
   const { movieId } = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [actors, setActors] = useState([]);
 
+  console.log(movieId);
   useEffect(() => {
     if (!movieId) return;
     const fetchCast = async () => {
@@ -19,7 +22,7 @@ const Cast = () => {
         const castingActors = castData.cast;
         setActors(castingActors);
       } catch (error) {
-        console.error(error);
+        toast.error(error);
       } finally {
         setIsLoading(false);
       }
