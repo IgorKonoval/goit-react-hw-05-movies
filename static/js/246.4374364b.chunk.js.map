@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/246.4374364b.chunk.js","mappings":"gMAAe,SAASA,IACtB,OAAOC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,qBACd,C","sources":["pages/MoviesDetailsPage.js"],"sourcesContent":["export default function MoviesDetailsPage() {\n  return <div>MoviesDetailsPage</div>;\n}\n"],"names":["MoviesDetailsPage","_jsx","children"],"sourceRoot":""}
